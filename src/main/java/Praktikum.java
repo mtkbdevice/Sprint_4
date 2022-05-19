@@ -2,10 +2,10 @@ public class Praktikum {
 
     public static void main(String[] args) {
 
-        String nameAndSername = "Franzz Kafka";
-        Account account = new Account(nameAndSername);
+        String nameAndSurname = "Franzz Kafka";
+        Account account = new Account(nameAndSurname);
 
-        if(account.checkNameToEmboss() == true){
+        if(account.checkNameToEmboss()){
             System.out.println("Валидация прошла");
         }
         else{

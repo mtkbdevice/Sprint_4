@@ -6,11 +6,11 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class NameSernameValidatorTest {
 
-    private final String nameSername;
+    private final String nameSurname;
     private final boolean expectedResult;
 
-    public NameSernameValidatorTest(String nameSername, boolean expectedResult){
-        this.nameSername = nameSername;
+    public NameSernameValidatorTest(String nameSurname, boolean expectedResult){
+        this.nameSurname = nameSurname;
         this.expectedResult = expectedResult;
     }
 
@@ -29,7 +29,7 @@ public class NameSernameValidatorTest {
 
     @Test
     public void nameSernameFieldFillingTest(){
-        Account account = new Account(nameSername);
+        Account account = new Account(nameSurname);
         boolean actualResult = account.checkNameToEmboss();
         Assert.assertEquals(expectedResult, actualResult);
     }

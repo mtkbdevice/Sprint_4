@@ -7,23 +7,18 @@ public class Account {
     }
 
     public boolean checkNameToEmboss() {
-        if(name.length() >= 3 && name.length() <= 19 && spaceChecker() == true){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return name.length() >= 3 && name.length() <= 19 && spaceChecker();
     }
 
-    public boolean spaceChecker(){
+    private boolean spaceChecker(){
         char[] nameArray = name.toCharArray();
         int counter = 0;
         for(int i = 0; i < name.length(); i++){
-            if(Character.isWhitespace(nameArray[i]) == true){
+            if(Character.isWhitespace(nameArray[i])){
                 counter++;
             }
         }
-        if(Character.isWhitespace(nameArray[0]) != true && Character.isWhitespace(nameArray[nameArray.length - 1]) != true && counter == 1){
+        if(!name.startsWith(" ") && !name.endsWith(" ")&& counter == 1){
             return true;
         }
         else
